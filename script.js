@@ -1,55 +1,55 @@
 // =====================
 // FORM VALIDATION & SUBMISSION
 // =====================
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contactForm');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const form = document.getElementById('contactForm');
     
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
+//     if (form) {
+//         form.addEventListener('submit', function(e) {
+//             e.preventDefault();
             
-            // Bootstrap form validation
-            if (!form.checkValidity() === false) {
-                e.stopPropagation();
-            }
+//             // Bootstrap form validation
+//             if (!form.checkValidity() === false) {
+//                 e.stopPropagation();
+//             }
             
-            form.classList.add('was-validated');
+//             form.classList.add('was-validated');
             
             // If all fields are valid
-            if (form.checkValidity()) {
-                // Get form data
-                const formData = {
-                    name: document.getElementById('name').value,
-                    email: document.getElementById('email').value,
-                    phone: document.getElementById('phone').value,
-                    city: document.getElementById('city').value,
-                    company: document.getElementById('company').value,
-                    message: document.getElementById('message').value
-                };
+            // if (form.checkValidity()) {
+            //     // Get form data
+            //     const formData = {
+            //         name: document.getElementById('name').value,
+            //         email: document.getElementById('email').value,
+            //         phone: document.getElementById('phone').value,
+            //         city: document.getElementById('city').value,
+            //         company: document.getElementById('company').value,
+            //         message: document.getElementById('message').value
+            //     };
                 
                 // Log form data (in real scenario, send to server)
-                console.log('Form Data:', formData);
+                // console.log('Form Data:', formData);
                 
-                // Show success message
-                const successMessage = document.getElementById('successMessage');
-                if (successMessage) {
-                    successMessage.classList.remove('d-none');
-                }
+                // // Show success message
+                // const successMessage = document.getElementById('successMessage');
+                // if (successMessage) {
+                //     successMessage.classList.remove('d-none');
+                // }
                 
                 // Reset form
-                form.reset();
-                form.classList.remove('was-validated');
+                // form.reset();
+                // form.classList.remove('was-validated');
                 
                 // Hide success message after 5 seconds
-                setTimeout(function() {
-                    if (successMessage) {
-                        successMessage.classList.add('d-none');
-                    }
-                }, 5000);
-            }
-        });
-    }
-});
+//                 setTimeout(function() {
+//                     if (successMessage) {
+//                         successMessage.classList.add('d-none');
+//                     }
+//                 }, 5000);
+//             }
+//         });
+//     }
+// });
 
 // =====================
 // SMOOTH SCROLL ANIMATIONS
