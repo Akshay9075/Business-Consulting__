@@ -8,29 +8,29 @@
 //         form.addEventListener('submit', function(e) {
 //             e.preventDefault();
             
-//             // Bootstrap form validation
-//             if (!form.checkValidity() === false) {
-//                 e.stopPropagation();
-//             }
+            // Bootstrap form validation
+            // if (!form.checkValidity() === false) {
+            //     e.stopPropagation();
+            // }
             
-//             form.classList.add('was-validated');
+            // form.classList.add('was-validated');
             
             // If all fields are valid
             // if (form.checkValidity()) {
-            //     // Get form data
-            //     const formData = {
-            //         name: document.getElementById('name').value,
-            //         email: document.getElementById('email').value,
-            //         phone: document.getElementById('phone').value,
-            //         city: document.getElementById('city').value,
-            //         company: document.getElementById('company').value,
-            //         message: document.getElementById('message').value
-            //     };
+                // Get form data
+                // const formData = {
+                //     name: document.getElementById('name').value,
+                //     email: document.getElementById('email').value,
+                //     phone: document.getElementById('phone').value,
+                //     city: document.getElementById('city').value,
+                //     company: document.getElementById('company').value,
+                //     message: document.getElementById('message').value
+                // };
                 
                 // Log form data (in real scenario, send to server)
                 // console.log('Form Data:', formData);
                 
-                // // Show success message
+                // Show success message
                 // const successMessage = document.getElementById('successMessage');
                 // if (successMessage) {
                 //     successMessage.classList.remove('d-none');
@@ -257,6 +257,21 @@ function setActiveNav() {
 }
 
 document.addEventListener('DOMContentLoaded', setActiveNav);
+
+// =====================
+// INDUSTRIES GRID CLEANUP
+// =====================
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+    if (currentPage !== 'industries.html') {
+        return;
+    }
+
+    document.querySelectorAll('.industry-card, .industry-badge').forEach(card => {
+        card.querySelectorAll('p, ul').forEach(extraContent => extraContent.remove());
+    });
+});
 
 // =====================
 // INDUSTRIES PAGE SECTION HOOKS
